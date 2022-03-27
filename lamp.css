@@ -1,3 +1,8 @@
+/* ! Lu olang kalo udh dikasih bilang makasi a, susah oe buatnya */
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -5,12 +10,14 @@
     box-sizing: border-box;
 }
 
+
+
 .hero {
-    background: #1d2026;
-    min-height: 100vh;
+    /* background: #1d2026; */
     width: 100%;
     color: #Fff;
     position: relative;
+    overflow: hidden;
 }
 
 nav {
@@ -26,7 +33,7 @@ nav .menu {
     cursor: pointer;
 }
 
-nav .logo {
+.s {
     width: 160px;
     cursor: pointer;
 }
@@ -45,7 +52,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color:  #3bd1ff;
 
 }
 
@@ -57,6 +64,7 @@ button {
     border: 0;
     outline: 0;
     cursor: pointer;
+    transition: background 0.5s;
 
 }
 
@@ -66,8 +74,7 @@ button span {
     height: 26px;
     width: 26px;
     border-radius: 50%;
-    margin-left: 2px;
-
+    margin-left: 2px, margin-left 0.5s;
 }
 
 .lamp-con {
@@ -75,6 +82,7 @@ button span {
     top: -20px;
     left: 22%;
     width: 200px;
+    opacity: 0;
 
 
 }
@@ -84,14 +92,10 @@ button span {
 
 }
 
-.light {
-    position: absolute;
-    top: 97%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    margin-left: -10px;
+.logo {
+   width: 160px;
     opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .text-con {
@@ -107,7 +111,7 @@ button span {
 
 .text-con a {
     text-decoration: none;
-    background: #09986f;
+    background:  #3bd1ff;
     padding: 14px 48px;
     display: inline-block;
     color: #fff;
@@ -131,12 +135,54 @@ button span {
     border-radius: 2px;
 }
 
-.control .lamp span{
+.control .line span{
     width:  50%;
     height: 8px;
     margin-top: -2px;
     border-radius: 4px;
-    background: #00986f;
+    background:  #3bd1ff;
     display: block;
 }
 
+.active {
+    background: #3bd1ff;
+
+}
+
+/* @ RGB seferti bities  */
+
+.active2 {
+    cursor: default;
+    object-fit: cover;
+    outline: none;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+    opacity: 1;
+  }
+  @keyframes animate {
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }
+
+  .vid video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+  }
+
+.active span {
+    background: #fff;
+    margin-left: 31px;
+}
+
+.on {
+    opacity: 1;
+}
